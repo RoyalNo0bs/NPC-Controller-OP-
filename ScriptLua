@@ -1,0 +1,1315 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+if game.Players.LocalPlayer.PlayerGui:FindFirstChild("NPCPanel") then
+	game.Players.LocalPlayer.PlayerGui:FindFirstChild("NPCPanel"):Destroy()
+end
+
+local NPCPanel = Instance.new("ScreenGui")
+local Panel = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local ControlFrame = Instance.new("Frame")
+local UICorner_2 = Instance.new("UICorner")
+local Contents = Instance.new("ScrollingFrame")
+local Information = Instance.new("Frame")
+local UICorner_3 = Instance.new("UICorner")
+local PlayerIcon = Instance.new("ImageLabel")
+local UICorner_4 = Instance.new("UICorner")
+local DisplayName = Instance.new("TextLabel")
+local Username = Instance.new("TextLabel")
+local UserID = Instance.new("TextLabel")
+local UIListLayout = Instance.new("UIListLayout")
+local PlayerList = Instance.new("Frame")
+local UICorner_5 = Instance.new("UICorner")
+local Title = Instance.new("TextLabel")
+local Contents_2 = Instance.new("ScrollingFrame")
+local UIListLayout_2 = Instance.new("UIListLayout")
+local TemplateIcon = Instance.new("ImageButton")
+local UICorner_6 = Instance.new("UICorner")
+local Title_2 = Instance.new("TextLabel")
+local Actions = Instance.new("Frame")
+local UICorner_7 = Instance.new("UICorner")
+local Title_3 = Instance.new("TextLabel")
+local WalkToPlayer = Instance.new("TextButton")
+local UICorner_8 = Instance.new("UICorner")
+local Title_4 = Instance.new("TextLabel")
+local Freeze = Instance.new("TextButton")
+local UICorner_9 = Instance.new("UICorner")
+local Title_5 = Instance.new("TextLabel")
+local Teleport = Instance.new("TextButton")
+local UICorner_10 = Instance.new("UICorner")
+local Title_6 = Instance.new("TextLabel")
+local Jump = Instance.new("TextButton")
+local UICorner_11 = Instance.new("UICorner")
+local Title_7 = Instance.new("TextLabel")
+local Stats = Instance.new("Frame")
+local UICorner_12 = Instance.new("UICorner")
+local Title_8 = Instance.new("TextLabel")
+local WalkSpeed = Instance.new("TextButton")
+local UICorner_13 = Instance.new("UICorner")
+local Input = Instance.new("TextBox")
+local JumpPower = Instance.new("TextButton")
+local UICorner_14 = Instance.new("UICorner")
+local Input_2 = Instance.new("TextBox")
+local Health = Instance.new("TextButton")
+local UICorner_15 = Instance.new("UICorner")
+local Title_9 = Instance.new("TextBox")
+local FieldOfView = Instance.new("TextButton")
+local UICorner_16 = Instance.new("UICorner")
+local Input_3 = Instance.new("TextBox")
+local MainFolder = Instance.new("Frame")
+local UICorner_17 = Instance.new("UICorner")
+local Title_10 = Instance.new("TextLabel")
+local Plot3 = Instance.new("TextButton")
+local UICorner_18 = Instance.new("UICorner")
+local Title_11 = Instance.new("TextLabel")
+local SpawnedInToys = Instance.new("TextButton")
+local UICorner_19 = Instance.new("UICorner")
+local Title_12 = Instance.new("TextLabel")
+local Plot2 = Instance.new("TextButton")
+local UICorner_20 = Instance.new("UICorner")
+local Title_13 = Instance.new("TextLabel")
+local Plot1 = Instance.new("TextButton")
+local UICorner_21 = Instance.new("UICorner")
+local Title_14 = Instance.new("TextLabel")
+local Plot5 = Instance.new("TextButton")
+local UICorner_22 = Instance.new("UICorner")
+local Title_15 = Instance.new("TextLabel")
+local Plot4 = Instance.new("TextButton")
+local UICorner_23 = Instance.new("UICorner")
+local Title_16 = Instance.new("TextLabel")
+local Other = Instance.new("Frame")
+local UICorner_24 = Instance.new("UICorner")
+local Title_17 = Instance.new("TextLabel")
+local ESP = Instance.new("TextButton")
+local UICorner_25 = Instance.new("UICorner")
+local Title_18 = Instance.new("TextLabel")
+local ViewPlayer = Instance.new("TextButton")
+local UICorner_26 = Instance.new("UICorner")
+local Title_19 = Instance.new("TextLabel")
+local ThirdPerson = Instance.new("TextButton")
+local UICorner_27 = Instance.new("UICorner")
+local Title_20 = Instance.new("TextLabel")
+local PlotBarriers = Instance.new("TextButton")
+local UICorner_28 = Instance.new("UICorner")
+local Title_21 = Instance.new("TextLabel")
+local TPPlayer = Instance.new("TextButton")
+local UICorner_29 = Instance.new("UICorner")
+local Title_22 = Instance.new("TextLabel")
+local WalkOnWater = Instance.new("TextButton")
+local UICorner_30 = Instance.new("UICorner")
+local Title_23 = Instance.new("TextLabel")
+local Other_2 = Instance.new("Frame")
+local Title_24 = Instance.new("TextLabel")
+local TopBar = Instance.new("Frame")
+local Divider = Instance.new("Frame")
+local Title_25 = Instance.new("TextLabel")
+
+--Properties:
+
+NPCPanel.Name = "NPCPanel"
+NPCPanel.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+NPCPanel.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+NPCPanel.DisplayOrder = 10000
+NPCPanel.ResetOnSpawn = false
+
+Panel.Name = "Panel"
+Panel.Parent = NPCPanel
+Panel.BackgroundColor3 = Color3.fromRGB(38, 37, 44)
+Panel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Panel.BorderSizePixel = 0
+Panel.Position = UDim2.new(0.511764705, 0, 0.353383452, 0)
+Panel.Size = UDim2.new(0.40196079, 0, 0.4988361, 0)
+
+UICorner.CornerRadius = UDim.new(0.0199999996, 0)
+UICorner.Parent = Panel
+
+ControlFrame.Name = "ControlFrame"
+ControlFrame.Parent = Panel
+ControlFrame.BackgroundColor3 = Color3.fromRGB(76, 74, 88)
+ControlFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ControlFrame.BorderSizePixel = 0
+ControlFrame.Position = UDim2.new(0.0221430976, 0, 0.209932178, 0)
+ControlFrame.Size = UDim2.new(0.955713809, 0, 0.760530949, 0)
+
+UICorner_2.CornerRadius = UDim.new(0.0199999996, 0)
+UICorner_2.Parent = ControlFrame
+
+Contents.Name = "Contents"
+Contents.Parent = ControlFrame
+Contents.Active = true
+Contents.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Contents.BackgroundTransparency = 1.000
+Contents.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Contents.BorderSizePixel = 0
+Contents.Position = UDim2.new(0, 0, 0.0234868415, 0)
+Contents.Size = UDim2.new(1, 0, 0.976513207, 0)
+Contents.CanvasSize = UDim2.new(0, 0, 0, 0)
+Contents.ScrollBarThickness = 5
+Contents.AutomaticCanvasSize = Enum.AutomaticSize.Y
+
+Information.Name = "Information"
+Information.Parent = Contents
+Information.BackgroundColor3 = Color3.fromRGB(108, 90, 197)
+Information.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Information.BorderSizePixel = 0
+Information.Position = UDim2.new(0.0138359331, 0, -3.09681695e-07, 0)
+Information.Size = UDim2.new(0.972328126, 0, 0.460280269, 0)
+
+UICorner_3.CornerRadius = UDim.new(0.0500000007, 0)
+UICorner_3.Parent = Information
+
+PlayerIcon.Name = "PlayerIcon"
+PlayerIcon.Parent = Information
+PlayerIcon.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+PlayerIcon.BackgroundTransparency = 1.000
+PlayerIcon.BorderColor3 = Color3.fromRGB(0, 0, 0)
+PlayerIcon.BorderSizePixel = 0
+PlayerIcon.Position = UDim2.new(0.777656555, 0, 0.0661400259, 0)
+PlayerIcon.Size = UDim2.new(0.202099934, 0, 0.848797023, 0)
+PlayerIcon.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+
+UICorner_4.CornerRadius = UDim.new(0.0500000007, 0)
+UICorner_4.Parent = PlayerIcon
+
+DisplayName.Name = "DisplayName"
+DisplayName.Parent = Information
+DisplayName.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+DisplayName.BackgroundTransparency = 1.000
+DisplayName.BorderColor3 = Color3.fromRGB(0, 0, 0)
+DisplayName.BorderSizePixel = 0
+DisplayName.Position = UDim2.new(0.257584155, 0, 0.121451162, 0)
+DisplayName.Size = UDim2.new(0.492230386, 0, 0.1826327, 0)
+DisplayName.Font = Enum.Font.GothamBold
+DisplayName.Text = "DisplayName"
+DisplayName.TextColor3 = Color3.fromRGB(255, 255, 255)
+DisplayName.TextScaled = true
+DisplayName.TextSize = 14.000
+DisplayName.TextWrapped = true
+DisplayName.TextXAlignment = Enum.TextXAlignment.Right
+
+Username.Name = "Username"
+Username.Parent = Information
+Username.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Username.BackgroundTransparency = 1.000
+Username.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Username.BorderSizePixel = 0
+Username.Position = UDim2.new(0.257584155, 0, 0.330894589, 0)
+Username.Size = UDim2.new(0.492230386, 0, 0.1826327, 0)
+Username.Font = Enum.Font.Gotham
+Username.Text = "Username"
+Username.TextColor3 = Color3.fromRGB(255, 255, 255)
+Username.TextScaled = true
+Username.TextSize = 14.000
+Username.TextWrapped = true
+Username.TextXAlignment = Enum.TextXAlignment.Right
+
+UserID.Name = "UserID"
+UserID.Parent = Information
+UserID.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+UserID.BackgroundTransparency = 1.000
+UserID.BorderColor3 = Color3.fromRGB(0, 0, 0)
+UserID.BorderSizePixel = 0
+UserID.Position = UDim2.new(0.383568525, 0, 0.541663468, 0)
+UserID.Size = UDim2.new(0.366246015, 0, 0.135888442, 0)
+UserID.Font = Enum.Font.Gotham
+UserID.Text = "UserID"
+UserID.TextColor3 = Color3.fromRGB(255, 255, 255)
+UserID.TextScaled = true
+UserID.TextSize = 14.000
+UserID.TextWrapped = true
+UserID.TextXAlignment = Enum.TextXAlignment.Right
+
+UIListLayout.Parent = Contents
+UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
+UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout.Padding = UDim.new(0.0500000007, 0)
+
+PlayerList.Name = "PlayerList"
+PlayerList.Parent = Contents
+PlayerList.BackgroundColor3 = Color3.fromRGB(60, 58, 71)
+PlayerList.BorderColor3 = Color3.fromRGB(0, 0, 0)
+PlayerList.BorderSizePixel = 0
+PlayerList.Position = UDim2.new(0.0138359331, 0, -3.09681695e-07, 0)
+PlayerList.Size = UDim2.new(0.972328126, 0, 0.460280269, 0)
+
+UICorner_5.CornerRadius = UDim.new(0.0500000007, 0)
+UICorner_5.Parent = PlayerList
+
+Title.Name = "Title"
+Title.Parent = PlayerList
+Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title.BackgroundTransparency = 1.000
+Title.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Title.BorderSizePixel = 0
+Title.Position = UDim2.new(0.0153123094, 0, 0.0827187672, 0)
+Title.Size = UDim2.new(0.617193282, 0, 0.140053406, 0)
+Title.Font = Enum.Font.Gotham
+Title.Text = "Select A Player For The NPC's To Chase"
+Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title.TextScaled = true
+Title.TextSize = 14.000
+Title.TextWrapped = true
+Title.TextXAlignment = Enum.TextXAlignment.Left
+
+Contents_2.Name = "Contents"
+Contents_2.Parent = PlayerList
+Contents_2.Active = true
+Contents_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Contents_2.BackgroundTransparency = 1.000
+Contents_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Contents_2.BorderSizePixel = 0
+Contents_2.Position = UDim2.new(0.0153123094, 0, 0.299070299, 0)
+Contents_2.Size = UDim2.new(0.984687686, 0, 0.634789705, 0)
+Contents_2.CanvasSize = UDim2.new(0, 0, 0, 0)
+Contents_2.HorizontalScrollBarInset = Enum.ScrollBarInset.ScrollBar
+Contents_2.ScrollBarThickness = 5
+Contents_2.AutomaticCanvasSize = Enum.AutomaticSize.X
+
+UIListLayout_2.Parent = Contents_2
+UIListLayout_2.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout_2.VerticalAlignment = Enum.VerticalAlignment.Center
+UIListLayout_2.Wraps = true
+UIListLayout_2.Padding = UDim.new(0.0500000007, 0)
+
+TemplateIcon.Name = "TemplateIcon"
+TemplateIcon.Parent = Contents_2
+TemplateIcon.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TemplateIcon.BackgroundTransparency = 1.000
+TemplateIcon.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TemplateIcon.BorderSizePixel = 0
+TemplateIcon.Position = UDim2.new(1.62688551e-07, 0, 0, 0)
+TemplateIcon.Size = UDim2.new(0.163887963, 0, 0.999999404, 0)
+TemplateIcon.Visible = false
+TemplateIcon.Image = "rbxasset://textures/ui/GuiImagePlaceholder.png"
+TemplateIcon.ScaleType = Enum.ScaleType.Fit
+
+UICorner_6.CornerRadius = UDim.new(1, 0)
+UICorner_6.Parent = TemplateIcon
+
+Title_2.Name = "Title"
+Title_2.Parent = TemplateIcon
+Title_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title_2.BackgroundTransparency = 1.000
+Title_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Title_2.BorderSizePixel = 0
+Title_2.Position = UDim2.new(0.0153121129, 0, 0.79469794, 0)
+Title_2.Size = UDim2.new(1, 0, 0.288020641, 0)
+Title_2.Font = Enum.Font.GothamBold
+Title_2.Text = "Username"
+Title_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title_2.TextScaled = true
+Title_2.TextSize = 14.000
+Title_2.TextWrapped = true
+Title_2.TextXAlignment = Enum.TextXAlignment.Left
+
+Actions.Name = "Actions"
+Actions.Parent = Contents
+Actions.BackgroundColor3 = Color3.fromRGB(60, 58, 71)
+Actions.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Actions.BorderSizePixel = 0
+Actions.Position = UDim2.new(0.0138359331, 0, 0.49206844, 0)
+Actions.Size = UDim2.new(0.972328126, 0, 0.510280252, 0)
+
+UICorner_7.CornerRadius = UDim.new(0.0500000007, 0)
+UICorner_7.Parent = Actions
+
+Title_3.Name = "Title"
+Title_3.Parent = Actions
+Title_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title_3.BackgroundTransparency = 1.000
+Title_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Title_3.BorderSizePixel = 0
+Title_3.Position = UDim2.new(0.0153123094, 0, 0.0827187672, 0)
+Title_3.Size = UDim2.new(0.617193282, 0, 0.140053406, 0)
+Title_3.Font = Enum.Font.Gotham
+Title_3.Text = "Actions"
+Title_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title_3.TextScaled = true
+Title_3.TextSize = 14.000
+Title_3.TextWrapped = true
+Title_3.TextXAlignment = Enum.TextXAlignment.Left
+
+WalkToPlayer.Name = "WalkToPlayer"
+WalkToPlayer.Parent = Actions
+WalkToPlayer.Active = false
+WalkToPlayer.BackgroundColor3 = Color3.fromRGB(53, 255, 87)
+WalkToPlayer.BorderColor3 = Color3.fromRGB(0, 0, 0)
+WalkToPlayer.BorderSizePixel = 0
+WalkToPlayer.Position = UDim2.new(0.0131235328, 0, 0.242513448, 0)
+WalkToPlayer.Size = UDim2.new(0.469999999, 0, 0.299954832, 0)
+WalkToPlayer.Text = ""
+
+UICorner_8.CornerRadius = UDim.new(0.100000001, 0)
+UICorner_8.Parent = WalkToPlayer
+
+Title_4.Name = "Title"
+Title_4.Parent = WalkToPlayer
+Title_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title_4.BackgroundTransparency = 1.000
+Title_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Title_4.BorderSizePixel = 0
+Title_4.Position = UDim2.new(0.00414331863, 0, 0.204980507, 0)
+Title_4.Size = UDim2.new(1, 0, 0.572082877, 0)
+Title_4.Font = Enum.Font.Gotham
+Title_4.Text = "Walk To Player"
+Title_4.TextColor3 = Color3.fromRGB(34, 33, 39)
+Title_4.TextScaled = true
+Title_4.TextSize = 14.000
+Title_4.TextWrapped = true
+
+Freeze.Name = "Freeze"
+Freeze.Parent = Actions
+Freeze.Active = false
+Freeze.BackgroundColor3 = Color3.fromRGB(34, 33, 39)
+Freeze.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Freeze.BorderSizePixel = 0
+Freeze.Position = UDim2.new(0.0131235328, 0, 0.62833029, 0)
+Freeze.Size = UDim2.new(0.469999999, 0, 0.300000012, 0)
+Freeze.Text = ""
+
+UICorner_9.CornerRadius = UDim.new(0.100000001, 0)
+UICorner_9.Parent = Freeze
+
+Title_5.Name = "Title"
+Title_5.Parent = Freeze
+Title_5.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title_5.BackgroundTransparency = 1.000
+Title_5.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Title_5.BorderSizePixel = 0
+Title_5.Position = UDim2.new(0.00400000019, 0, 0.204999998, 0)
+Title_5.Size = UDim2.new(1, 0, 0.572000027, 0)
+Title_5.Font = Enum.Font.Gotham
+Title_5.Text = "Freeze"
+Title_5.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title_5.TextScaled = true
+Title_5.TextSize = 14.000
+Title_5.TextWrapped = true
+
+Teleport.Name = "Teleport"
+Teleport.Parent = Actions
+Teleport.Active = false
+Teleport.BackgroundColor3 = Color3.fromRGB(34, 33, 39)
+Teleport.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Teleport.BorderSizePixel = 0
+Teleport.Position = UDim2.new(0.509186983, 0, 0.628330171, 0)
+Teleport.Size = UDim2.new(0.469999999, 0, 0.300000012, 0)
+Teleport.Text = ""
+
+UICorner_10.CornerRadius = UDim.new(0.100000001, 0)
+UICorner_10.Parent = Teleport
+
+Title_6.Name = "Title"
+Title_6.Parent = Teleport
+Title_6.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title_6.BackgroundTransparency = 1.000
+Title_6.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Title_6.BorderSizePixel = 0
+Title_6.Position = UDim2.new(0.00400000019, 0, 0.204999998, 0)
+Title_6.Size = UDim2.new(1, 0, 0.572000027, 0)
+Title_6.Font = Enum.Font.Gotham
+Title_6.Text = "Teleport NPC's"
+Title_6.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title_6.TextScaled = true
+Title_6.TextSize = 14.000
+Title_6.TextWrapped = true
+
+Jump.Name = "Jump"
+Jump.Parent = Actions
+Jump.Active = false
+Jump.BackgroundColor3 = Color3.fromRGB(34, 33, 39)
+Jump.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Jump.BorderSizePixel = 0
+Jump.Position = UDim2.new(0.509186983, 0, 0.242513284, 0)
+Jump.Size = UDim2.new(0.469999999, 0, 0.299954832, 0)
+Jump.Text = ""
+
+UICorner_11.CornerRadius = UDim.new(0.100000001, 0)
+UICorner_11.Parent = Jump
+
+Title_7.Name = "Title"
+Title_7.Parent = Jump
+Title_7.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title_7.BackgroundTransparency = 1.000
+Title_7.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Title_7.BorderSizePixel = 0
+Title_7.Position = UDim2.new(0.00414331863, 0, 0.204980507, 0)
+Title_7.Size = UDim2.new(1, 0, 0.572082877, 0)
+Title_7.Font = Enum.Font.Gotham
+Title_7.Text = "Jump"
+Title_7.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title_7.TextScaled = true
+Title_7.TextSize = 14.000
+Title_7.TextWrapped = true
+
+Stats.Name = "Stats"
+Stats.Parent = Contents
+Stats.BackgroundColor3 = Color3.fromRGB(60, 58, 71)
+Stats.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Stats.BorderSizePixel = 0
+Stats.Position = UDim2.new(0.0138359331, 0, 0.49206844, 0)
+Stats.Size = UDim2.new(0.972328126, 0, 0.510280252, 0)
+
+UICorner_12.CornerRadius = UDim.new(0.0500000007, 0)
+UICorner_12.Parent = Stats
+
+Title_8.Name = "Title"
+Title_8.Parent = Stats
+Title_8.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title_8.BackgroundTransparency = 1.000
+Title_8.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Title_8.BorderSizePixel = 0
+Title_8.Position = UDim2.new(0.0153123094, 0, 0.0827187672, 0)
+Title_8.Size = UDim2.new(0.617193282, 0, 0.140053406, 0)
+Title_8.Font = Enum.Font.Gotham
+Title_8.Text = "Stats"
+Title_8.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title_8.TextScaled = true
+Title_8.TextSize = 14.000
+Title_8.TextWrapped = true
+Title_8.TextXAlignment = Enum.TextXAlignment.Left
+
+WalkSpeed.Name = "WalkSpeed"
+WalkSpeed.Parent = Stats
+WalkSpeed.Active = false
+WalkSpeed.BackgroundColor3 = Color3.fromRGB(34, 33, 39)
+WalkSpeed.BorderColor3 = Color3.fromRGB(0, 0, 0)
+WalkSpeed.BorderSizePixel = 0
+WalkSpeed.Position = UDim2.new(0.0131235328, 0, 0.242513448, 0)
+WalkSpeed.Size = UDim2.new(0.469999999, 0, 0.299954832, 0)
+WalkSpeed.Text = ""
+WalkSpeed.TextColor3 = Color3.fromRGB(255, 255, 255)
+
+UICorner_13.CornerRadius = UDim.new(0.100000001, 0)
+UICorner_13.Parent = WalkSpeed
+
+Input.Name = "Input"
+Input.Parent = WalkSpeed
+Input.Active = false
+Input.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Input.BackgroundTransparency = 1.000
+Input.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Input.BorderSizePixel = 0
+Input.Position = UDim2.new(0.00414331863, 0, 0.204980507, 0)
+Input.Size = UDim2.new(1, 0, 0.572082877, 0)
+Input.Font = Enum.Font.Gotham
+Input.PlaceholderColor3 = Color3.fromRGB(113, 113, 113)
+Input.PlaceholderText = "Walk Speed"
+Input.Text = ""
+Input.TextColor3 = Color3.fromRGB(255, 255, 255)
+Input.TextScaled = true
+Input.TextSize = 14.000
+Input.TextWrapped = true
+
+JumpPower.Name = "JumpPower"
+JumpPower.Parent = Stats
+JumpPower.Active = false
+JumpPower.BackgroundColor3 = Color3.fromRGB(34, 33, 39)
+JumpPower.BorderColor3 = Color3.fromRGB(0, 0, 0)
+JumpPower.BorderSizePixel = 0
+JumpPower.Position = UDim2.new(0.0131235328, 0, 0.62833029, 0)
+JumpPower.Size = UDim2.new(0.469999999, 0, 0.300000012, 0)
+JumpPower.Text = ""
+
+UICorner_14.CornerRadius = UDim.new(0.100000001, 0)
+UICorner_14.Parent = JumpPower
+
+Input_2.Name = "Input"
+Input_2.Parent = JumpPower
+Input_2.Active = false
+Input_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Input_2.BackgroundTransparency = 1.000
+Input_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Input_2.BorderSizePixel = 0
+Input_2.Position = UDim2.new(0.00414331863, 0, 0.204980507, 0)
+Input_2.Size = UDim2.new(1, 0, 0.572082877, 0)
+Input_2.Font = Enum.Font.Gotham
+Input_2.PlaceholderColor3 = Color3.fromRGB(113, 113, 113)
+Input_2.PlaceholderText = "Jump Power"
+Input_2.Text = ""
+Input_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Input_2.TextScaled = true
+Input_2.TextSize = 14.000
+Input_2.TextWrapped = true
+
+Health.Name = "Health"
+Health.Parent = Stats
+Health.Active = false
+Health.BackgroundColor3 = Color3.fromRGB(34, 33, 39)
+Health.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Health.BorderSizePixel = 0
+Health.Position = UDim2.new(0.509186983, 0, 0.628330171, 0)
+Health.Size = UDim2.new(0.469999999, 0, 0.300000012, 0)
+Health.Text = ""
+
+UICorner_15.CornerRadius = UDim.new(0.100000001, 0)
+UICorner_15.Parent = Health
+
+Title_9.Name = "Title"
+Title_9.Parent = Health
+Title_9.Active = false
+Title_9.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title_9.BackgroundTransparency = 1.000
+Title_9.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Title_9.BorderSizePixel = 0
+Title_9.Position = UDim2.new(0.00414331863, 0, 0.204980507, 0)
+Title_9.Size = UDim2.new(1, 0, 0.572082877, 0)
+Title_9.Font = Enum.Font.Gotham
+Title_9.PlaceholderColor3 = Color3.fromRGB(113, 113, 113)
+Title_9.PlaceholderText = "Health"
+Title_9.Text = ""
+Title_9.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title_9.TextScaled = true
+Title_9.TextSize = 14.000
+Title_9.TextWrapped = true
+
+FieldOfView.Name = "FieldOfView"
+FieldOfView.Parent = Stats
+FieldOfView.Active = false
+FieldOfView.BackgroundColor3 = Color3.fromRGB(34, 33, 39)
+FieldOfView.BorderColor3 = Color3.fromRGB(0, 0, 0)
+FieldOfView.BorderSizePixel = 0
+FieldOfView.Position = UDim2.new(0.509186983, 0, 0.242513284, 0)
+FieldOfView.Size = UDim2.new(0.469999999, 0, 0.299954832, 0)
+FieldOfView.Text = ""
+
+UICorner_16.CornerRadius = UDim.new(0.100000001, 0)
+UICorner_16.Parent = FieldOfView
+
+Input_3.Name = "Input"
+Input_3.Parent = FieldOfView
+Input_3.Active = false
+Input_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Input_3.BackgroundTransparency = 1.000
+Input_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Input_3.BorderSizePixel = 0
+Input_3.Position = UDim2.new(0.00414331863, 0, 0.204980507, 0)
+Input_3.Size = UDim2.new(1, 0, 0.572082877, 0)
+Input_3.Font = Enum.Font.Gotham
+Input_3.PlaceholderColor3 = Color3.fromRGB(113, 113, 113)
+Input_3.PlaceholderText = "FOV"
+Input_3.Text = ""
+Input_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+Input_3.TextScaled = true
+Input_3.TextSize = 14.000
+Input_3.TextWrapped = true
+
+MainFolder.Name = "MainFolder"
+MainFolder.Parent = Contents
+MainFolder.BackgroundColor3 = Color3.fromRGB(60, 58, 71)
+MainFolder.BorderColor3 = Color3.fromRGB(0, 0, 0)
+MainFolder.BorderSizePixel = 0
+MainFolder.Position = UDim2.new(0.0138359331, 0, 0.250873297, 0)
+MainFolder.Size = UDim2.new(0.972328126, 0, 0.720789433, 0)
+
+UICorner_17.CornerRadius = UDim.new(0.0500000007, 0)
+UICorner_17.Parent = MainFolder
+
+Title_10.Name = "Title"
+Title_10.Parent = MainFolder
+Title_10.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title_10.BackgroundTransparency = 1.000
+Title_10.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Title_10.BorderSizePixel = 0
+Title_10.Position = UDim2.new(0, 5, 0, 8)
+Title_10.Size = UDim2.new(0, 235, 0, 14)
+Title_10.Font = Enum.Font.Gotham
+Title_10.Text = "Main NPC Folder"
+Title_10.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title_10.TextScaled = true
+Title_10.TextSize = 14.000
+Title_10.TextWrapped = true
+Title_10.TextXAlignment = Enum.TextXAlignment.Left
+
+Plot3.Name = "Plot3"
+Plot3.Parent = MainFolder
+Plot3.Active = false
+Plot3.BackgroundColor3 = Color3.fromRGB(34, 33, 39)
+Plot3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Plot3.BorderSizePixel = 0
+Plot3.Position = UDim2.new(0.509186864, 0, 0.443473458, 0)
+Plot3.Size = UDim2.new(0.469816715, 0, 0.211177841, 0)
+Plot3.Text = ""
+
+UICorner_18.CornerRadius = UDim.new(0.100000001, 0)
+UICorner_18.Parent = Plot3
+
+Title_11.Name = "Title"
+Title_11.Parent = Plot3
+Title_11.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title_11.BackgroundTransparency = 1.000
+Title_11.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Title_11.BorderSizePixel = 0
+Title_11.Position = UDim2.new(0.00400000019, 0, 0.204999998, 0)
+Title_11.Size = UDim2.new(1, 0, 0.572000027, 0)
+Title_11.Font = Enum.Font.Gotham
+Title_11.Text = "Plot3"
+Title_11.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title_11.TextScaled = true
+Title_11.TextSize = 14.000
+Title_11.TextWrapped = true
+
+SpawnedInToys.Name = "SpawnedInToys"
+SpawnedInToys.Parent = MainFolder
+SpawnedInToys.Active = false
+SpawnedInToys.BackgroundColor3 = Color3.fromRGB(53, 255, 87)
+SpawnedInToys.BorderColor3 = Color3.fromRGB(0, 0, 0)
+SpawnedInToys.BorderSizePixel = 0
+SpawnedInToys.Position = UDim2.new(0.0131233726, 0, 0.168942273, 0)
+SpawnedInToys.Size = UDim2.new(0.469816715, 0, 0.211177841, 0)
+SpawnedInToys.Text = ""
+
+UICorner_19.CornerRadius = UDim.new(0.100000001, 0)
+UICorner_19.Parent = SpawnedInToys
+
+Title_12.Name = "Title"
+Title_12.Parent = SpawnedInToys
+Title_12.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title_12.BackgroundTransparency = 1.000
+Title_12.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Title_12.BorderSizePixel = 0
+Title_12.Position = UDim2.new(0.00414331863, 0, 0.204980507, 0)
+Title_12.Size = UDim2.new(1, 0, 0.572082877, 0)
+Title_12.Font = Enum.Font.Gotham
+Title_12.Text = "SpawnedInToys"
+Title_12.TextColor3 = Color3.fromRGB(34, 33, 39)
+Title_12.TextScaled = true
+Title_12.TextSize = 14.000
+Title_12.TextWrapped = true
+
+Plot2.Name = "Plot2"
+Plot2.Parent = MainFolder
+Plot2.Active = false
+Plot2.BackgroundColor3 = Color3.fromRGB(34, 33, 39)
+Plot2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Plot2.BorderSizePixel = 0
+Plot2.Position = UDim2.new(0.0131233726, 0, 0.443473458, 0)
+Plot2.Size = UDim2.new(0.469816715, 0, 0.211177841, 0)
+Plot2.Text = ""
+
+UICorner_20.CornerRadius = UDim.new(0.100000001, 0)
+UICorner_20.Parent = Plot2
+
+Title_13.Name = "Title"
+Title_13.Parent = Plot2
+Title_13.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title_13.BackgroundTransparency = 1.000
+Title_13.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Title_13.BorderSizePixel = 0
+Title_13.Position = UDim2.new(0.00400000019, 0, 0.204999998, 0)
+Title_13.Size = UDim2.new(1, 0, 0.572000027, 0)
+Title_13.Font = Enum.Font.Gotham
+Title_13.Text = "Plot2"
+Title_13.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title_13.TextScaled = true
+Title_13.TextSize = 14.000
+Title_13.TextWrapped = true
+
+Plot1.Name = "Plot1"
+Plot1.Parent = MainFolder
+Plot1.Active = false
+Plot1.BackgroundColor3 = Color3.fromRGB(34, 33, 39)
+Plot1.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Plot1.BorderSizePixel = 0
+Plot1.Position = UDim2.new(0.509186864, 0, 0.168942273, 0)
+Plot1.Size = UDim2.new(0.469816715, 0, 0.211177841, 0)
+Plot1.Text = ""
+
+UICorner_21.CornerRadius = UDim.new(0.100000001, 0)
+UICorner_21.Parent = Plot1
+
+Title_14.Name = "Title"
+Title_14.Parent = Plot1
+Title_14.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title_14.BackgroundTransparency = 1.000
+Title_14.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Title_14.BorderSizePixel = 0
+Title_14.Position = UDim2.new(0.00414331863, 0, 0.204980507, 0)
+Title_14.Size = UDim2.new(1, 0, 0.572082877, 0)
+Title_14.Font = Enum.Font.Gotham
+Title_14.Text = "Plot1"
+Title_14.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title_14.TextScaled = true
+Title_14.TextSize = 14.000
+Title_14.TextWrapped = true
+
+Plot5.Name = "Plot5"
+Plot5.Parent = MainFolder
+Plot5.Active = false
+Plot5.BackgroundColor3 = Color3.fromRGB(34, 33, 39)
+Plot5.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Plot5.BorderSizePixel = 0
+Plot5.Position = UDim2.new(0.511811495, 0, 0.732083142, 0)
+Plot5.Size = UDim2.new(0.469816715, 0, 0.211177841, 0)
+Plot5.Text = ""
+
+UICorner_22.CornerRadius = UDim.new(0.100000001, 0)
+UICorner_22.Parent = Plot5
+
+Title_15.Name = "Title"
+Title_15.Parent = Plot5
+Title_15.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title_15.BackgroundTransparency = 1.000
+Title_15.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Title_15.BorderSizePixel = 0
+Title_15.Position = UDim2.new(0.00400000019, 0, 0.204999998, 0)
+Title_15.Size = UDim2.new(1, 0, 0.572000027, 0)
+Title_15.Font = Enum.Font.Gotham
+Title_15.Text = "Plot5"
+Title_15.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title_15.TextScaled = true
+Title_15.TextSize = 14.000
+Title_15.TextWrapped = true
+
+Plot4.Name = "Plot4"
+Plot4.Parent = MainFolder
+Plot4.Active = false
+Plot4.BackgroundColor3 = Color3.fromRGB(34, 33, 39)
+Plot4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Plot4.BorderSizePixel = 0
+Plot4.Position = UDim2.new(0.0157480463, 0, 0.732083142, 0)
+Plot4.Size = UDim2.new(0.469816715, 0, 0.211177841, 0)
+Plot4.Text = ""
+
+UICorner_23.CornerRadius = UDim.new(0.100000001, 0)
+UICorner_23.Parent = Plot4
+
+Title_16.Name = "Title"
+Title_16.Parent = Plot4
+Title_16.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title_16.BackgroundTransparency = 1.000
+Title_16.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Title_16.BorderSizePixel = 0
+Title_16.Position = UDim2.new(0.00400000019, 0, 0.204999998, 0)
+Title_16.Size = UDim2.new(1, 0, 0.572000027, 0)
+Title_16.Font = Enum.Font.Gotham
+Title_16.Text = "Plot4"
+Title_16.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title_16.TextScaled = true
+Title_16.TextSize = 14.000
+Title_16.TextWrapped = true
+
+Other.Name = "Other"
+Other.Parent = Contents
+Other.BackgroundColor3 = Color3.fromRGB(60, 58, 71)
+Other.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Other.BorderSizePixel = 0
+Other.Position = UDim2.new(0.0138359331, 0, 0.250873297, 0)
+Other.Size = UDim2.new(0.972328126, 0, 0.720789433, 0)
+
+UICorner_24.CornerRadius = UDim.new(0.0500000007, 0)
+UICorner_24.Parent = Other
+
+Title_17.Name = "Title"
+Title_17.Parent = Other
+Title_17.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title_17.BackgroundTransparency = 1.000
+Title_17.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Title_17.BorderSizePixel = 0
+Title_17.Position = UDim2.new(0, 5, 0, 8)
+Title_17.Size = UDim2.new(0, 235, 0, 14)
+Title_17.Font = Enum.Font.Gotham
+Title_17.Text = "Other"
+Title_17.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title_17.TextScaled = true
+Title_17.TextSize = 14.000
+Title_17.TextWrapped = true
+Title_17.TextXAlignment = Enum.TextXAlignment.Left
+
+ESP.Name = "ESP"
+ESP.Parent = Other
+ESP.Active = false
+ESP.BackgroundColor3 = Color3.fromRGB(34, 33, 39)
+ESP.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ESP.BorderSizePixel = 0
+ESP.Position = UDim2.new(0.509186864, 0, 0.443473458, 0)
+ESP.Size = UDim2.new(0.469816715, 0, 0.211177841, 0)
+ESP.Text = ""
+
+UICorner_25.CornerRadius = UDim.new(0.100000001, 0)
+UICorner_25.Parent = ESP
+
+Title_18.Name = "Title"
+Title_18.Parent = ESP
+Title_18.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title_18.BackgroundTransparency = 1.000
+Title_18.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Title_18.BorderSizePixel = 0
+Title_18.Position = UDim2.new(0.00400000019, 0, 0.204999998, 0)
+Title_18.Size = UDim2.new(1, 0, 0.572000027, 0)
+Title_18.Font = Enum.Font.Gotham
+Title_18.Text = "ESP NPC's"
+Title_18.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title_18.TextScaled = true
+Title_18.TextSize = 14.000
+Title_18.TextWrapped = true
+
+ViewPlayer.Name = "ViewPlayer"
+ViewPlayer.Parent = Other
+ViewPlayer.Active = false
+ViewPlayer.BackgroundColor3 = Color3.fromRGB(34, 33, 39)
+ViewPlayer.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ViewPlayer.BorderSizePixel = 0
+ViewPlayer.Position = UDim2.new(0.0131233726, 0, 0.168942273, 0)
+ViewPlayer.Size = UDim2.new(0.469816715, 0, 0.211177841, 0)
+ViewPlayer.Text = ""
+
+UICorner_26.CornerRadius = UDim.new(0.100000001, 0)
+UICorner_26.Parent = ViewPlayer
+
+Title_19.Name = "Title"
+Title_19.Parent = ViewPlayer
+Title_19.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title_19.BackgroundTransparency = 1.000
+Title_19.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Title_19.BorderSizePixel = 0
+Title_19.Position = UDim2.new(0.00414331863, 0, 0.204980507, 0)
+Title_19.Size = UDim2.new(1, 0, 0.572082877, 0)
+Title_19.Font = Enum.Font.Gotham
+Title_19.Text = "View Player"
+Title_19.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title_19.TextScaled = true
+Title_19.TextSize = 14.000
+Title_19.TextWrapped = true
+
+ThirdPerson.Name = "ThirdPerson"
+ThirdPerson.Parent = Other
+ThirdPerson.Active = false
+ThirdPerson.BackgroundColor3 = Color3.fromRGB(34, 33, 39)
+ThirdPerson.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ThirdPerson.BorderSizePixel = 0
+ThirdPerson.Position = UDim2.new(0.0131233726, 0, 0.443473458, 0)
+ThirdPerson.Size = UDim2.new(0.469816715, 0, 0.211177841, 0)
+ThirdPerson.Text = ""
+
+UICorner_27.CornerRadius = UDim.new(0.100000001, 0)
+UICorner_27.Parent = ThirdPerson
+
+Title_20.Name = "Title"
+Title_20.Parent = ThirdPerson
+Title_20.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title_20.BackgroundTransparency = 1.000
+Title_20.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Title_20.BorderSizePixel = 0
+Title_20.Position = UDim2.new(0.00400000019, 0, 0.204999998, 0)
+Title_20.Size = UDim2.new(1, 0, 0.572000027, 0)
+Title_20.Font = Enum.Font.Gotham
+Title_20.Text = "3rd Person"
+Title_20.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title_20.TextScaled = true
+Title_20.TextSize = 14.000
+Title_20.TextWrapped = true
+
+PlotBarriers.Name = "PlotBarriers"
+PlotBarriers.Parent = Other
+PlotBarriers.Active = false
+PlotBarriers.BackgroundColor3 = Color3.fromRGB(34, 33, 39)
+PlotBarriers.BorderColor3 = Color3.fromRGB(0, 0, 0)
+PlotBarriers.BorderSizePixel = 0
+PlotBarriers.Position = UDim2.new(0.509186864, 0, 0.168942273, 0)
+PlotBarriers.Size = UDim2.new(0.469816715, 0, 0.211177841, 0)
+PlotBarriers.Text = ""
+
+UICorner_28.CornerRadius = UDim.new(0.100000001, 0)
+UICorner_28.Parent = PlotBarriers
+
+Title_21.Name = "Title"
+Title_21.Parent = PlotBarriers
+Title_21.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title_21.BackgroundTransparency = 1.000
+Title_21.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Title_21.BorderSizePixel = 0
+Title_21.Position = UDim2.new(0.00414331863, 0, 0.204980507, 0)
+Title_21.Size = UDim2.new(1, 0, 0.572082877, 0)
+Title_21.Font = Enum.Font.Gotham
+Title_21.Text = "Disable Plot Barriers"
+Title_21.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title_21.TextScaled = true
+Title_21.TextSize = 14.000
+Title_21.TextWrapped = true
+
+TPPlayer.Name = "TPPlayer"
+TPPlayer.Parent = Other
+TPPlayer.Active = false
+TPPlayer.BackgroundColor3 = Color3.fromRGB(34, 33, 39)
+TPPlayer.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TPPlayer.BorderSizePixel = 0
+TPPlayer.Position = UDim2.new(0.511811495, 0, 0.732083142, 0)
+TPPlayer.Size = UDim2.new(0.469816715, 0, 0.211177841, 0)
+TPPlayer.Text = ""
+
+UICorner_29.CornerRadius = UDim.new(0.100000001, 0)
+UICorner_29.Parent = TPPlayer
+
+Title_22.Name = "Title"
+Title_22.Parent = TPPlayer
+Title_22.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title_22.BackgroundTransparency = 1.000
+Title_22.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Title_22.BorderSizePixel = 0
+Title_22.Position = UDim2.new(0.00400000019, 0, 0.204999998, 0)
+Title_22.Size = UDim2.new(1, 0, 0.572000027, 0)
+Title_22.Font = Enum.Font.Gotham
+Title_22.Text = "TP To Player"
+Title_22.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title_22.TextScaled = true
+Title_22.TextSize = 14.000
+Title_22.TextWrapped = true
+
+WalkOnWater.Name = "WalkOnWater"
+WalkOnWater.Parent = Other
+WalkOnWater.Active = false
+WalkOnWater.BackgroundColor3 = Color3.fromRGB(34, 33, 39)
+WalkOnWater.BorderColor3 = Color3.fromRGB(0, 0, 0)
+WalkOnWater.BorderSizePixel = 0
+WalkOnWater.Position = UDim2.new(0.0157480463, 0, 0.732083142, 0)
+WalkOnWater.Size = UDim2.new(0.469816715, 0, 0.211177841, 0)
+WalkOnWater.Text = ""
+
+UICorner_30.CornerRadius = UDim.new(0.100000001, 0)
+UICorner_30.Parent = WalkOnWater
+
+Title_23.Name = "Title"
+Title_23.Parent = WalkOnWater
+Title_23.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title_23.BackgroundTransparency = 1.000
+Title_23.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Title_23.BorderSizePixel = 0
+Title_23.Position = UDim2.new(0.00400000019, 0, 0.204999998, 0)
+Title_23.Size = UDim2.new(1, 0, 0.572000027, 0)
+Title_23.Font = Enum.Font.Gotham
+Title_23.Text = "Walk On Water"
+Title_23.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title_23.TextScaled = true
+Title_23.TextSize = 14.000
+Title_23.TextWrapped = true
+
+Other_2.Name = "Other"
+Other_2.Parent = Contents
+Other_2.BackgroundColor3 = Color3.fromRGB(60, 58, 71)
+Other_2.BackgroundTransparency = 1.000
+Other_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Other_2.BorderSizePixel = 0
+Other_2.Position = UDim2.new(0.0138359331, 0, 0.286256462, 0)
+Other_2.Size = UDim2.new(0.972328126, 0, 0.272812247, 0)
+
+Title_24.Name = "Title"
+Title_24.Parent = Other_2
+Title_24.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title_24.BackgroundTransparency = 1.000
+Title_24.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Title_24.BorderSizePixel = 0
+Title_24.Position = UDim2.new(0, 5, 0, 8)
+Title_24.Size = UDim2.new(1, 0, 1, 0)
+Title_24.Font = Enum.Font.Gotham
+Title_24.Text = "Thank you for using my script! Some inspiration for this script was from @Brickified! So give him some credit!"
+Title_24.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title_24.TextSize = 14.000
+Title_24.TextWrapped = true
+Title_24.TextXAlignment = Enum.TextXAlignment.Left
+Title_24.TextYAlignment = Enum.TextYAlignment.Top
+
+TopBar.Name = "TopBar"
+TopBar.Parent = Panel
+TopBar.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TopBar.BackgroundTransparency = 1.000
+TopBar.BorderColor3 = Color3.fromRGB(0, 0, 0)
+TopBar.BorderSizePixel = 0
+TopBar.Position = UDim2.new(0.0221431088, 0, 0.0451649129, 0)
+TopBar.Size = UDim2.new(0.955713809, 0, 0.138683453, 0)
+
+Divider.Name = "Divider"
+Divider.Parent = TopBar
+Divider.AnchorPoint = Vector2.new(0.5, 0.5)
+Divider.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Divider.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Divider.BorderSizePixel = 0
+Divider.Position = UDim2.new(0.5, 0, 0.899999976, 0)
+Divider.Size = UDim2.new(1, 0, 0.0299999993, 0)
+
+Title_25.Name = "Title"
+Title_25.Parent = TopBar
+Title_25.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title_25.BackgroundTransparency = 1.000
+Title_25.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Title_25.BorderSizePixel = 0
+Title_25.Position = UDim2.new(0.0153122684, 0, 0.08271911, 0)
+Title_25.Size = UDim2.new(0.617193282, 0, 0.617193639, 0)
+Title_25.Font = Enum.Font.Gotham
+Title_25.Text = "NPC Panel [OP🔥]"
+Title_25.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title_25.TextScaled = true
+Title_25.TextSize = 14.000
+Title_25.TextWrapped = true
+Title_25.TextXAlignment = Enum.TextXAlignment.Left
+
+local plr = game.Players.LocalPlayer
+local MainFolderSelected = workspace:FindFirstChild(plr.Name.."SpawnedInToys")
+local CurrentTarget = plr.Character
+local WalkToPoint = true
+
+function MoveTo(NPC,Target)
+	if NPC and NPC:FindFirstChild("Humanoid") and Target and Target.Torso then
+	local Humanoid = NPC:FindFirstChild("Humanoid")
+		Humanoid:MoveTo(Target.Torso.Position)
+		Humanoid.WalkSpeed = WalkSpeed.Input.Text
+		Humanoid.JumpPower = JumpPower.Input.Text
+	end
+end
+
+function AutoAssignFolder()
+	if Plot1.BackgroundColor3 == Color3.fromRGB(53, 255, 87) then
+		MainFolderSelected = workspace:FindFirstChild("PlotItems"):FindFirstChild("Plot1")
+	elseif Plot2.BackgroundColor3 == Color3.fromRGB(53, 255, 87) then
+		MainFolderSelected = workspace:FindFirstChild("PlotItems"):FindFirstChild("Plot2")
+	elseif Plot3.BackgroundColor3 == Color3.fromRGB(53, 255, 87) then
+		MainFolderSelected = workspace:FindFirstChild("PlotItems"):FindFirstChild("Plot3")
+	elseif Plot4.BackgroundColor3 == Color3.fromRGB(53, 255, 87) then
+		MainFolderSelected = workspace:FindFirstChild("PlotItems"):FindFirstChild("Plot4")
+	elseif Plot5.BackgroundColor3 == Color3.fromRGB(53, 255, 87) then
+		MainFolderSelected = workspace:FindFirstChild("PlotItems"):FindFirstChild("Plot5")
+	elseif SpawnedInToys.BackgroundColor3 == Color3.fromRGB(53, 255, 87) then
+		MainFolderSelected = workspace:FindFirstChild(plr.Name.."SpawnedInToys")
+	end
+end
+
+function AddPlayerToList(Player)
+	local Username = Player.Name
+	local ImageSize = Enum.ThumbnailSize.Size60x60 -- Thumbnail Size
+	local ImageType = Enum.ThumbnailType.AvatarBust -- Thumbnail Type
+	local ImageId = game.Players:GetUserThumbnailAsync(Player.UserId, ImageType, ImageSize) -- Gets Image from UserId
+	
+	local Clone = PlayerList.Contents.TemplateIcon:Clone()
+	
+	Clone.Parent = PlayerList.Contents
+	Clone.Name = Username
+	Clone.Title.Text = Username
+	Clone.Image = ImageId
+	Clone.Visible = true
+	Clone.MouseButton1Click:Connect(function()
+		for _, Button in ipairs(PlayerList.Contents:GetChildren()) do
+			if Button:IsA("ImageButton") then
+				Button.BackgroundColor3 = Color3.fromRGB(53, 255, 87)
+				Button.BackgroundTransparency = 1
+			end
+		end
+		CurrentTarget = game.Players:FindFirstChild(Clone.Name).Character or game.Players:FindFirstChild(Clone.Name).CharacterAdded
+		Clone.BackgroundColor3 = Color3.fromRGB(53, 255, 87)
+		Clone.BackgroundTransparency = 0.5
+	end)
+end
+
+for _,Player in ipairs(game.Players:GetPlayers()) do
+	AddPlayerToList(Player)
+end
+
+game.Players.PlayerAdded:Connect(function(plr)
+	AddPlayerToList(plr)
+end)
+
+game.Players.PlayerRemoving:Connect(function(plr)
+	PlayerList.Contents:FindFirstChild(plr.Name):Destroy()
+end)
+
+for _, TextButton in ipairs(MainFolder:GetChildren()) do
+	if TextButton:IsA("TextButton") then
+		TextButton.MouseButton1Click:Connect(function()
+			for _, TextButton2 in ipairs(MainFolder:GetChildren()) do
+				if TextButton2:IsA("TextButton") then
+					TextButton2.BackgroundColor3 = Color3.fromRGB(34, 33, 39)
+					TextButton2:FindFirstChild("Title").TextColor3 = Color3.new(1, 1, 1)
+				end
+			end
+
+			TextButton.BackgroundColor3 = Color3.fromRGB(53, 255, 87)
+			TextButton:FindFirstChild("Title").TextColor3 = Color3.new(0.133333, 0.129412, 0.152941)
+			AutoAssignFolder()
+		end)
+	end
+end
+
+ESP.MouseButton1Click:Connect(function()
+	if ESP.BackgroundColor3 == Color3.fromRGB(53, 255, 87) then
+		ESP.BackgroundColor3 = Color3.fromRGB(34, 33, 39)
+		ESP.Title.TextColor3 = Color3.new(1, 1, 1)
+		for _, NPC in ipairs(MainFolderSelected:GetChildren()) do
+			if NPC:IsA("Model") and NPC:FindFirstChild("Humanoid") then
+				repeat
+					if NPC:FindFirstChild("ESPHighlight") then
+						NPC:FindFirstChild("ESPHighlight"):Destroy()
+					end
+				until NPC:FindFirstChild("ESPHighlight") == nil
+			end
+		end
+	else
+		ESP.BackgroundColor3 = Color3.fromRGB(53, 255, 87)
+		ESP.Title.TextColor3 = Color3.new(0.133333, 0.129412, 0.152941)
+		for _, NPC in ipairs(MainFolderSelected:GetChildren()) do
+			if NPC:IsA("Model") and NPC:FindFirstChild("Humanoid") then
+				local ESPHighlight = Instance.new("Highlight")
+				ESPHighlight.Parent = NPC
+				ESPHighlight.Name = "ESPHighlight"
+				ESPHighlight.Enabled = true
+			end
+		end
+	end
+end)
+
+ViewPlayer.MouseButton1Click:Connect(function()
+	if ViewPlayer.BackgroundColor3 == Color3.fromRGB(53, 255, 87) then
+		ViewPlayer.BackgroundColor3 = Color3.fromRGB(34, 33, 39)
+		ViewPlayer.Title.TextColor3 = Color3.new(1, 1, 1)
+		workspace.CurrentCamera.CameraSubject = plr.Character.Humanoid
+	else
+		ViewPlayer.BackgroundColor3 = Color3.fromRGB(53, 255, 87)
+		ViewPlayer.Title.TextColor3 = Color3.new(0.133333, 0.129412, 0.152941)
+		workspace.CurrentCamera.CameraSubject = CurrentTarget.Humanoid
+	end
+end)
+
+PlotBarriers.MouseButton1Click:Connect(function()
+	if PlotBarriers.BackgroundColor3 == Color3.fromRGB(53, 255, 87) then
+		PlotBarriers.BackgroundColor3 = Color3.fromRGB(34, 33, 39)
+		PlotBarriers.Title.TextColor3 = Color3.new(1, 1, 1)
+		for _, Boarder in ipairs(workspace.Plots:GetDescendants()) do
+			if Boarder:IsA("BasePart") and Boarder.Name == "PlotBarrier" then
+				Boarder.CanCollide = true
+			end
+		end
+	else
+		PlotBarriers.BackgroundColor3 = Color3.fromRGB(53, 255, 87)
+		PlotBarriers.Title.TextColor3 = Color3.new(0.133333, 0.129412, 0.152941)
+		for _, Boarder in ipairs(workspace.Plots:GetDescendants()) do
+			if Boarder:IsA("BasePart") and Boarder.Name == "PlotBarrier" then
+				Boarder.CanCollide = false
+			end
+		end
+	end
+end)
+
+WalkOnWater.MouseButton1Click:Connect(function()
+	if WalkOnWater.BackgroundColor3 == Color3.fromRGB(53, 255, 87) then
+		WalkOnWater.BackgroundColor3 = Color3.fromRGB(34, 33, 39)
+		WalkOnWater.Title.TextColor3 = Color3.new(1, 1, 1)
+		for _, ocean in ipairs(workspace.Map.AlwaysHereTweenedObjects.Ocean.Object.ObjectModel:GetChildren()) do
+			if ocean:IsA("BasePart") and ocean.Name == "Ocean" then
+				ocean.CanCollide = false
+			end
+		end
+	else
+		WalkOnWater.BackgroundColor3 = Color3.fromRGB(53, 255, 87)
+		WalkOnWater.Title.TextColor3 = Color3.new(0.133333, 0.129412, 0.152941)
+		for _, ocean in ipairs(workspace.Map.AlwaysHereTweenedObjects.Ocean.Object.ObjectModel:GetChildren()) do
+			if ocean:IsA("BasePart") and ocean.Name == "Ocean" then
+				ocean.CanCollide = true
+			end
+		end
+	end
+end)
+
+WalkToPlayer.MouseButton1Click:Connect(function()
+	WalkSpeed.Active = true
+	if WalkToPlayer.BackgroundColor3 == Color3.fromRGB(53, 255, 87) then
+		WalkToPoint = false
+		WalkToPlayer.BackgroundColor3 = Color3.fromRGB(34, 33, 39)
+		WalkToPlayer.Title.TextColor3 = Color3.new(1, 1, 1)
+	else
+		WalkToPoint = true
+		WalkToPlayer.BackgroundColor3 = Color3.fromRGB(53, 255, 87)
+		WalkToPlayer.Title.TextColor3 = Color3.new(0.133333, 0.129412, 0.152941)
+	end
+end)
+
+ThirdPerson.MouseButton1Click:Connect(function()
+	if ThirdPerson.BackgroundColor3 == Color3.fromRGB(53, 255, 87) then
+		ThirdPerson.BackgroundColor3 = Color3.fromRGB(34, 33, 39)
+		ThirdPerson.Title.TextColor3 = Color3.new(1, 1, 1)
+		game.Players.LocalPlayer.CameraMode = Enum.CameraMode.LockFirstPerson
+		game.Players.LocalPlayer.CameraMaxZoomDistance = 0.5
+	else
+		ThirdPerson.BackgroundColor3 = Color3.fromRGB(53, 255, 87)
+		ThirdPerson.Title.TextColor3 = Color3.new(0.133333, 0.129412, 0.152941)
+		game.Players.LocalPlayer.CameraMode = Enum.CameraMode.Classic
+		game.Players.LocalPlayer.CameraMaxZoomDistance = 100000
+	end
+end)
+
+Jump.MouseButton1Click:Connect(function()
+	for _, NPC in ipairs(MainFolderSelected:GetChildren()) do
+		if NPC:IsA("Model") and NPC:FindFirstChild("HumanoidRootPart") and CurrentTarget and CurrentTarget.Torso then
+			local rootPart = NPC:WaitForChild("HumanoidRootPart") -- Central part of the character
+
+			-- Create a VectorForce
+			local force = Instance.new("VectorForce")
+			force.Attachment0 = rootPart:FindFirstChildOfClass("Attachment") or Instance.new("Attachment", rootPart) -- Ensure attachment exists
+			force.Force = Vector3.new(0, tonumber(JumpPower.Input.Text)*100, 0) -- Adjust the Y-value for upwards force
+			force.RelativeTo = Enum.ActuatorRelativeTo.World -- World-relative force
+			force.Parent = rootPart
+
+			-- Apply the force for a short time
+			task.wait(0.2) -- Duration of the force
+			force:Destroy() -- Remove the force to stop it
+		end
+	end
+end)
+
+Teleport.MouseButton1Click:Connect(function()
+	for _, NPC in ipairs(MainFolderSelected:GetChildren()) do
+		if NPC:IsA("Model") and NPC:FindFirstChild("HumanoidRootPart") and CurrentTarget and CurrentTarget.Torso then
+			NPC.HumanoidRootPart.CFrame = CFrame.new(CurrentTarget.Torso.CFrame.X,CurrentTarget.Torso.CFrame.Y,CurrentTarget.Torso.CFrame.Z)
+		end
+	end
+end)
+
+Freeze.MouseButton1Click:Connect(function()
+	if Freeze.BackgroundColor3 == Color3.fromRGB(34, 33, 39) then
+		for _, NPC in ipairs(MainFolderSelected:GetChildren()) do
+			if NPC and NPC:IsA("Model") and NPC:FindFirstChild("Humanoid") and NPC:FindFirstChild("HumanoidRootPart") then
+				local bodyVelocity = Instance.new("BodyVelocity")
+				bodyVelocity.MaxForce = Vector3.new(math.huge, math.huge, math.huge)
+				bodyVelocity.Velocity = Vector3.zero
+				bodyVelocity.P = 10000
+				bodyVelocity.Parent = NPC.HumanoidRootPart
+				bodyVelocity.Name = "FreezeVelocity"
+				Freeze.BackgroundColor3 = Color3.fromRGB(53, 255, 87)
+				Freeze.Title.TextColor3 = Color3.new(0.133333, 0.129412, 0.152941)
+
+			end
+		end
+	else
+		for _, NPC in ipairs(MainFolderSelected:GetChildren()) do
+			if NPC and NPC:IsA("Model") and NPC:FindFirstChild("Humanoid") and NPC:FindFirstChild("HumanoidRootPart") then
+				if NPC.HumanoidRootPart:FindFirstChild("FreezeVelocity") then
+					NPC.HumanoidRootPart:FindFirstChild("FreezeVelocity"):Destroy()
+				end
+			end
+		end
+		Freeze.BackgroundColor3 = Color3.fromRGB(34, 33, 39)
+		Freeze.Title.TextColor3 = Color3.new(1, 1, 1)
+	end
+end)
+
+local Loop = game:GetService("RunService").Stepped:Connect(function()
+	if WalkToPoint == true then
+		for _, NPC in ipairs(MainFolderSelected:GetChildren()) do
+			if NPC:IsA("Model") and NPC:FindFirstChild("Humanoid") then
+				MoveTo(NPC,CurrentTarget)
+			end
+		end
+	end
+end)
+
+NPCPanel.Destroying:Connect(function()
+	WalkToPoint = false
+	game.Players.LocalPlayer.CameraMode = Enum.CameraMode.LockFirstPerson
+	Loop:Disconnect()
+	for _, NPC in ipairs(MainFolderSelected:GetChildren()) do
+		if NPC:IsA("Model") and NPC:FindFirstChild("Humanoid") then
+			if NPC.HumanoidRootPart:FindFirstChild("FreezeVelocity") then
+				NPC.HumanoidRootPart:FindFirstChild("FreezeVelocity"):Destroy()
+			end
+		end
+	end
+end)

@@ -1101,6 +1101,18 @@ function AddPlayerToList(Player)
 	end)
 end
 
+function MakeNPCJump(Npc)
+	local rootPart = Npc:WaitForChild("HumanoidRootPart")
+
+	local force = Instance.new("VectorForce")
+	force.Attachment0 = rootPart:FindFirstChildOfClass("Attachment") or Instance.new("Attachment", rootPart)
+	force.Force = Vector3.new(0, tonumber(JumpPower.Input.Text)*100, 0) 
+	force.RelativeTo = Enum.ActuatorRelativeTo.World
+	force.Parent = rootPart
+	wait(0.2) 
+	force:Destroy()
+end
+
 for _,Player in ipairs(game.Players:GetPlayers()) do
 	AddPlayerToList(Player)
 end
@@ -1239,18 +1251,21 @@ end)
 Jump.MouseButton1Click:Connect(function()
 	for _, NPC in ipairs(MainFolderSelected:GetChildren()) do
 		if NPC:IsA("Model") and NPC:FindFirstChild("HumanoidRootPart") and CurrentTarget and CurrentTarget.Torso then
-			local rootPart = NPC:WaitForChild("HumanoidRootPart") -- Central part of the character
+			local rootPart = NPC:WaitForChild("HumanoidRootPart")
 
-			-- Create a VectorForce
 			local force = Instance.new("VectorForce")
-			force.Attachment0 = rootPart:FindFirstChildOfClass("Attachment") or Instance.new("Attachment", rootPart) -- Ensure attachment exists
-			force.Force = Vector3.new(0, tonumber(JumpPower.Input.Text)*100, 0) -- Adjust the Y-value for upwards force
-			force.RelativeTo = Enum.ActuatorRelativeTo.World -- World-relative force
+			force.Attachment0 = rootPart:FindFirstChildOfClass("Attachment") or Instance.new("Attachment", rootPart)
+			force.Force = Vector3.new(0, tonumber(JumpPower.Input.Text)*100, 0) 
+			force.RelativeTo = Enum.ActuatorRelativeTo.World
 			force.Parent = rootPart
-
-			-- Apply the force for a short time
-			task.wait(0.2) -- Duration of the force
-			force:Destroy() -- Remove the force to stop it
+		end
+	end
+	wait(0.2)
+	for _, NPC in ipairs(MainFolderSelected:GetChildren()) do
+		if NPC:IsA("Model") and NPC:FindFirstChild("HumanoidRootPart") and CurrentTarget and CurrentTarget.Torso then
+			local rootPart = NPC:WaitForChild("HumanoidRootPart")
+			local force = rootPart:FindFirstChildOfClass("VectorForce")
+			force:Destroy()
 		end
 	end
 end)
@@ -1301,6 +1316,9 @@ local Loop = game:GetService("RunService").Stepped:Connect(function()
 	end
 end)
 
+
+
+
 NPCPanel.Destroying:Connect(function()
 	WalkToPoint = false
 	game.Players.LocalPlayer.CameraMode = Enum.CameraMode.LockFirstPerson
@@ -1313,3 +1331,58 @@ NPCPanel.Destroying:Connect(function()
 		end
 	end
 end)
+
+local UserInputService = game:GetService("UserInputService")
+local runService = (game:GetService("RunService"));
+
+
+local gui = Panel
+
+local dragging
+local dragInput
+local dragStart
+local startPos
+
+function Lerp(a, b, m)
+	return a + (b - a) * m
+end;
+
+local lastMousePos
+local lastGoalPos
+local DRAG_SPEED = (8); -- // The speed of the UI darg.
+function Update(dt)
+	if not (startPos) then return end;
+	if not (dragging) and (lastGoalPos) then
+		gui.Position = UDim2.new(startPos.X.Scale, Lerp(gui.Position.X.Offset, lastGoalPos.X.Offset, dt * DRAG_SPEED), startPos.Y.Scale, Lerp(gui.Position.Y.Offset, lastGoalPos.Y.Offset, dt * DRAG_SPEED))
+		return 
+	end;
+
+	local delta = (lastMousePos - UserInputService:GetMouseLocation())
+	local xGoal = (startPos.X.Offset - delta.X);
+	local yGoal = (startPos.Y.Offset - delta.Y);
+	lastGoalPos = UDim2.new(startPos.X.Scale, xGoal, startPos.Y.Scale, yGoal)
+	gui.Position = UDim2.new(startPos.X.Scale, Lerp(gui.Position.X.Offset, xGoal, dt * DRAG_SPEED), startPos.Y.Scale, Lerp(gui.Position.Y.Offset, yGoal, dt * DRAG_SPEED))
+end;
+
+TopBar.InputBegan:Connect(function(input)
+	if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+		dragging = true
+		dragStart = input.Position
+		startPos = gui.Position
+		lastMousePos = UserInputService:GetMouseLocation()
+
+		input.Changed:Connect(function()
+			if input.UserInputState == Enum.UserInputState.End then
+				dragging = false
+			end
+		end)
+	end
+end)
+
+TopBar.InputChanged:Connect(function(input)
+	if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+		dragInput = input
+	end
+end)
+
+runService.Heartbeat:Connect(Update)

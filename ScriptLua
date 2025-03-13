@@ -1121,6 +1121,7 @@ function MoveTo(NPC,Target)
 
 
 	WalkSpeed.Active = false
+	WalkSpeed.Interactable = false
 	Input.TextEditable = true
 	Input_3.TextEditable = true
 	Input_2.TextEditable = true

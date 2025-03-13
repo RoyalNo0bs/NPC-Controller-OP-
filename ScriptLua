@@ -1121,9 +1121,9 @@ function MoveTo(NPC,Target)
 
 
 	WalkSpeed.Active = false
-	Input.Active = true
-	Input_3.Active = true
-	Input_2.Active = true
+	Input.TextEditable = true
+	Input_3.TextEditable = true
+	Input_2.TextEditable = true
 	if NPC and NPC:FindFirstChild("Humanoid") and Target and Target.Torso then
 		if not isLookingAt(Target.Torso, NPC.HumanoidRootPart,65) and MoveLook == true or MoveLook == false then
 			local Humanoid = NPC:FindFirstChild("Humanoid")

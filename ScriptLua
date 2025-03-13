@@ -520,7 +520,7 @@ UICorner_13.Parent = WalkSpeed
 
 Input.Name = "Input"
 Input.Parent = WalkSpeed
-Input.Active = false
+Input.Active = true
 Input.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Input.BackgroundTransparency = 1.000
 Input.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -551,7 +551,7 @@ UICorner_14.Parent = JumpPower
 
 Input_2.Name = "Input"
 Input_2.Parent = JumpPower
-Input_2.Active = false
+Input_2.Active = true
 Input_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Input_2.BackgroundTransparency = 1.000
 Input_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -613,7 +613,7 @@ UICorner_16.Parent = FieldOfView
 
 Input_3.Name = "Input"
 Input_3.Parent = FieldOfView
-Input_3.Active = false
+Input_3.Active = true
 Input_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Input_3.BackgroundTransparency = 1.000
 Input_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
@@ -1119,12 +1119,6 @@ function MoveTo(NPC,Target)
 		return angle <= math.rad(maxAngle)
 	end
 
-
-	WalkSpeed.Active = false
-	WalkSpeed.Interactable = false
-	Input.TextEditable = true
-	Input_3.TextEditable = true
-	Input_2.TextEditable = true
 	if NPC and NPC:FindFirstChild("Humanoid") and Target and Target.Torso then
 		if not isLookingAt(Target.Torso, NPC.HumanoidRootPart,65) and MoveLook == true or MoveLook == false then
 			local Humanoid = NPC:FindFirstChild("Humanoid")

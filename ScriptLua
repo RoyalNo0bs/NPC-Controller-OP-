@@ -1120,7 +1120,7 @@ function MoveTo(NPC,Target)
 	end
 
 
-	
+	WalkSpeed.Active = false
 	Input.Active = true
 	Input_3.Active = true
 	Input_2.Active = true

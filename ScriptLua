@@ -68,6 +68,9 @@ local Title_11 = Instance.new("TextLabel")
 local SpawnedInToys = Instance.new("TextButton")
 local UICorner_19 = Instance.new("UICorner")
 local Title_12 = Instance.new("TextLabel")
+local MoveWhenLooked = Instance.new("TextButton")
+local UICorner_31 = Instance.new("UICorner")
+local Title_28 = Instance.new("TextLabel")
 local Plot2 = Instance.new("TextButton")
 local UICorner_20 = Instance.new("UICorner")
 local Title_13 = Instance.new("TextLabel")
@@ -106,6 +109,8 @@ local Title_24 = Instance.new("TextLabel")
 local TopBar = Instance.new("Frame")
 local Divider = Instance.new("Frame")
 local Title_25 = Instance.new("TextLabel")
+local SetNetworkOwner = Instance.new("TextButton")
+local Title_27 = Instance.new("TextLabel")
 
 --Properties:
 
@@ -443,6 +448,34 @@ Title_7.TextColor3 = Color3.fromRGB(255, 255, 255)
 Title_7.TextScaled = true
 Title_7.TextSize = 14.000
 Title_7.TextWrapped = true
+
+MoveWhenLooked.Name = "MoveWhenLooked"
+MoveWhenLooked.Parent = Other
+MoveWhenLooked.Active = false
+MoveWhenLooked.BackgroundColor3 = Color3.fromRGB(34, 33, 39)
+MoveWhenLooked.BorderColor3 = Color3.fromRGB(0, 0, 0)
+MoveWhenLooked.BorderSizePixel = 0
+MoveWhenLooked.Position = UDim2.new(0.512, 0,0.796, 0)
+MoveWhenLooked.Size = UDim2.new(0.47, 0,0.169, 0)
+MoveWhenLooked.Text = ""
+
+UICorner_31.CornerRadius = UDim.new(0.100000001, 0)
+UICorner_31.Parent = MoveWhenLooked
+
+Title_28.Name = "Title"
+Title_28.Parent = MoveWhenLooked
+Title_28.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title_28.BackgroundTransparency = 1.000
+Title_28.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Title_28.BorderSizePixel = 0
+Title_28.Position = UDim2.new(0.00414331863, 0, 0.204980507, 0)
+Title_28.Size = UDim2.new(1, 0, 0.572082877, 0)
+Title_28.Font = Enum.Font.Gotham
+Title_28.Text = "Move When Looked"
+Title_28.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title_28.TextScaled = true
+Title_28.TextSize = 14.000
+Title_28.TextWrapped = true
 
 Stats.Name = "Stats"
 Stats.Parent = Contents
@@ -796,8 +829,8 @@ Other.Parent = Contents
 Other.BackgroundColor3 = Color3.fromRGB(60, 58, 71)
 Other.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Other.BorderSizePixel = 0
-Other.Position = UDim2.new(0.0138359331, 0, 0.250873297, 0)
-Other.Size = UDim2.new(0.972328126, 0, 0.720789433, 0)
+Other.Position = UDim2.new(0.0138359331, 0, -0.0365557559, 0)
+Other.Size = UDim2.new(0.972328126, 0, 0.898373306, 0)
 
 UICorner_24.CornerRadius = UDim.new(0.0500000007, 0)
 UICorner_24.Parent = Other
@@ -824,8 +857,8 @@ ESP.Active = false
 ESP.BackgroundColor3 = Color3.fromRGB(34, 33, 39)
 ESP.BorderColor3 = Color3.fromRGB(0, 0, 0)
 ESP.BorderSizePixel = 0
-ESP.Position = UDim2.new(0.509186864, 0, 0.443473458, 0)
-ESP.Size = UDim2.new(0.469816715, 0, 0.211177841, 0)
+ESP.Position = UDim2.new(0.509, 0,0.356, 0)
+ESP.Size = UDim2.new(0.47, 0,0.169, 0)
 ESP.Text = ""
 
 UICorner_25.CornerRadius = UDim.new(0.100000001, 0)
@@ -852,8 +885,8 @@ ViewPlayer.Active = false
 ViewPlayer.BackgroundColor3 = Color3.fromRGB(34, 33, 39)
 ViewPlayer.BorderColor3 = Color3.fromRGB(0, 0, 0)
 ViewPlayer.BorderSizePixel = 0
-ViewPlayer.Position = UDim2.new(0.0131233726, 0, 0.168942273, 0)
-ViewPlayer.Size = UDim2.new(0.469816715, 0, 0.211177841, 0)
+ViewPlayer.Position = UDim2.new(0.013, 0,0.136, 0)
+ViewPlayer.Size = UDim2.new(0.47, 0,0.169, 0)
 ViewPlayer.Text = ""
 
 UICorner_26.CornerRadius = UDim.new(0.100000001, 0)
@@ -880,8 +913,8 @@ ThirdPerson.Active = false
 ThirdPerson.BackgroundColor3 = Color3.fromRGB(34, 33, 39)
 ThirdPerson.BorderColor3 = Color3.fromRGB(0, 0, 0)
 ThirdPerson.BorderSizePixel = 0
-ThirdPerson.Position = UDim2.new(0.0131233726, 0, 0.443473458, 0)
-ThirdPerson.Size = UDim2.new(0.469816715, 0, 0.211177841, 0)
+ThirdPerson.Position = UDim2.new(0.013, 0,0.356, 0)
+ThirdPerson.Size = UDim2.new(0.47, 0,0.169, 0)
 ThirdPerson.Text = ""
 
 UICorner_27.CornerRadius = UDim.new(0.100000001, 0)
@@ -902,14 +935,40 @@ Title_20.TextScaled = true
 Title_20.TextSize = 14.000
 Title_20.TextWrapped = true
 
+SetNetworkOwner.Name = "SetNetworkOwner"
+SetNetworkOwner.Parent = Other
+SetNetworkOwner.Active = false
+SetNetworkOwner.BackgroundColor3 = Color3.fromRGB(34, 33, 39)
+SetNetworkOwner.BorderColor3 = Color3.fromRGB(0, 0, 0)
+SetNetworkOwner.BorderSizePixel = 0
+SetNetworkOwner.Position = UDim2.new(0.016, 0,0.796, 0)
+SetNetworkOwner.Size = UDim2.new(0.47, 0,0.169, 0)
+SetNetworkOwner.Text = ""
+
+Title_27.Name = "Title"
+Title_27.Parent = SetNetworkOwner
+Title_27.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title_27.BackgroundTransparency = 1.000
+Title_27.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Title_27.BorderSizePixel = 0
+Title_27.Position = UDim2.new(0.00400000019, 0, 0.204999998, 0)
+Title_27.Size = UDim2.new(1, 0, 0.572000027, 0)
+Title_27.Font = Enum.Font.Gotham
+Title_27.Text = "Set Network Owner"
+Title_27.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title_27.TextScaled = true
+Title_27.TextSize = 14.000
+Title_27.TextWrapped = true
+
+
 PlotBarriers.Name = "PlotBarriers"
 PlotBarriers.Parent = Other
 PlotBarriers.Active = false
 PlotBarriers.BackgroundColor3 = Color3.fromRGB(34, 33, 39)
 PlotBarriers.BorderColor3 = Color3.fromRGB(0, 0, 0)
 PlotBarriers.BorderSizePixel = 0
-PlotBarriers.Position = UDim2.new(0.509186864, 0, 0.168942273, 0)
-PlotBarriers.Size = UDim2.new(0.469816715, 0, 0.211177841, 0)
+PlotBarriers.Position = UDim2.new(0.509, 0,0.136, 0)
+PlotBarriers.Size = UDim2.new(0.47, 0,0.169, 0)
 PlotBarriers.Text = ""
 
 UICorner_28.CornerRadius = UDim.new(0.100000001, 0)
@@ -936,8 +995,8 @@ TPPlayer.Active = false
 TPPlayer.BackgroundColor3 = Color3.fromRGB(34, 33, 39)
 TPPlayer.BorderColor3 = Color3.fromRGB(0, 0, 0)
 TPPlayer.BorderSizePixel = 0
-TPPlayer.Position = UDim2.new(0.511811495, 0, 0.732083142, 0)
-TPPlayer.Size = UDim2.new(0.469816715, 0, 0.211177841, 0)
+TPPlayer.Position = UDim2.new(0.512, 0,0.587, 0)
+TPPlayer.Size = UDim2.new(0.47, 0,0.169, 0)
 TPPlayer.Text = ""
 
 UICorner_29.CornerRadius = UDim.new(0.100000001, 0)
@@ -964,8 +1023,8 @@ WalkOnWater.Active = false
 WalkOnWater.BackgroundColor3 = Color3.fromRGB(34, 33, 39)
 WalkOnWater.BorderColor3 = Color3.fromRGB(0, 0, 0)
 WalkOnWater.BorderSizePixel = 0
-WalkOnWater.Position = UDim2.new(0.0157480463, 0, 0.732083142, 0)
-WalkOnWater.Size = UDim2.new(0.469816715, 0, 0.211177841, 0)
+WalkOnWater.Position = UDim2.new(0.016, 0,0.587, 0)
+WalkOnWater.Size = UDim2.new(0.47, 0,0.169, 0)
 WalkOnWater.Text = ""
 
 UICorner_30.CornerRadius = UDim.new(0.100000001, 0)
@@ -1004,7 +1063,7 @@ Title_24.BorderSizePixel = 0
 Title_24.Position = UDim2.new(0, 5, 0, 8)
 Title_24.Size = UDim2.new(1, 0, 1, 0)
 Title_24.Font = Enum.Font.Gotham
-Title_24.Text = "Thank you for using my script! Some inspiration for this script was from @Brickified! So give him some credit!"
+Title_24.Text = "Thank you for using my script! This script is progressivly being developed by @Royal_No0bs. If you would like to support me you can follow me on roblox or my channel @RoyalFTAP"
 Title_24.TextColor3 = Color3.fromRGB(255, 255, 255)
 Title_24.TextSize = 14.000
 Title_24.TextWrapped = true
@@ -1049,13 +1108,32 @@ local plr = game.Players.LocalPlayer
 local MainFolderSelected = workspace:FindFirstChild(plr.Name.."SpawnedInToys")
 local CurrentTarget = plr.Character
 local WalkToPoint = true
+local MoveLook = false
 
 function MoveTo(NPC,Target)
+
+	local function isLookingAt(head, targetPart, maxAngle)
+		local headLookVector = head.CFrame.LookVector
+		local directionToTarget = (targetPart.Position - head.Position).Unit
+		local angle = math.acos(headLookVector:Dot(directionToTarget)) -- Angle in radians
+		return angle <= math.rad(maxAngle)
+	end
+
+
+	
 	if NPC and NPC:FindFirstChild("Humanoid") and Target and Target.Torso then
-	local Humanoid = NPC:FindFirstChild("Humanoid")
-		Humanoid:MoveTo(Target.Torso.Position)
-		Humanoid.WalkSpeed = WalkSpeed.Input.Text
-		Humanoid.JumpPower = JumpPower.Input.Text
+		if not isLookingAt(Target.Torso, NPC.HumanoidRootPart,65) and MoveLook == true or MoveLook == false then
+			local Humanoid = NPC:FindFirstChild("Humanoid")
+			Humanoid:MoveTo(Vector3.new(Target.Torso.Position.X,Target.Torso.Position.Y,Target.Torso.Position.Z))
+			Humanoid.WalkSpeed = WalkSpeed.Input.Text
+			Humanoid.JumpPower = JumpPower.Input.Text
+		elseif MoveLook == true and isLookingAt(Target.Torso, NPC.HumanoidRootPart,65) then
+			local Humanoid = NPC:FindFirstChild("Humanoid")
+			Humanoid:MoveTo(NPC.Torso.Position)
+		end
+	else
+		local Humanoid = NPC:FindFirstChild("Humanoid")
+		Humanoid:MoveTo(NPC.Torso.Position)
 	end
 end
 
@@ -1080,9 +1158,9 @@ function AddPlayerToList(Player)
 	local ImageSize = Enum.ThumbnailSize.Size60x60 -- Thumbnail Size
 	local ImageType = Enum.ThumbnailType.AvatarBust -- Thumbnail Type
 	local ImageId = game.Players:GetUserThumbnailAsync(Player.UserId, ImageType, ImageSize) -- Gets Image from UserId
-	
+
 	local Clone = PlayerList.Contents.TemplateIcon:Clone()
-	
+
 	Clone.Parent = PlayerList.Contents
 	Clone.Name = Username
 	Clone.Title.Text = Username
@@ -1101,18 +1179,6 @@ function AddPlayerToList(Player)
 	end)
 end
 
-function MakeNPCJump(Npc)
-	local rootPart = Npc:WaitForChild("HumanoidRootPart")
-
-	local force = Instance.new("VectorForce")
-	force.Attachment0 = rootPart:FindFirstChildOfClass("Attachment") or Instance.new("Attachment", rootPart)
-	force.Force = Vector3.new(0, tonumber(JumpPower.Input.Text)*100, 0) 
-	force.RelativeTo = Enum.ActuatorRelativeTo.World
-	force.Parent = rootPart
-	wait(0.2) 
-	force:Destroy()
-end
-
 for _,Player in ipairs(game.Players:GetPlayers()) do
 	AddPlayerToList(Player)
 end
@@ -1124,6 +1190,19 @@ end)
 game.Players.PlayerRemoving:Connect(function(plr)
 	PlayerList.Contents:FindFirstChild(plr.Name):Destroy()
 end)
+function CreateProfile()
+
+	local ImageSize = Enum.ThumbnailSize.Size420x420 -- Thumbnail Size
+	local ImageType = Enum.ThumbnailType.AvatarBust -- Thumbnail Type
+	local ImageId = game.Players:GetUserThumbnailAsync(plr.UserId, ImageType, ImageSize)
+	PlayerIcon.Image = ImageId
+
+	Username.Text = plr.Name
+	UserID.Text = plr.UserId
+	DisplayName.Text = plr.DisplayName
+end
+
+CreateProfile()
 
 for _, TextButton in ipairs(MainFolder:GetChildren()) do
 	if TextButton:IsA("TextButton") then
@@ -1178,6 +1257,18 @@ ViewPlayer.MouseButton1Click:Connect(function()
 		ViewPlayer.BackgroundColor3 = Color3.fromRGB(53, 255, 87)
 		ViewPlayer.Title.TextColor3 = Color3.new(0.133333, 0.129412, 0.152941)
 		workspace.CurrentCamera.CameraSubject = CurrentTarget.Humanoid
+	end
+end)
+
+MoveWhenLooked.MouseButton1Click:Connect(function()
+	if MoveWhenLooked.BackgroundColor3 == Color3.fromRGB(53, 255, 87) then
+		MoveWhenLooked.BackgroundColor3 = Color3.fromRGB(34, 33, 39)
+		MoveWhenLooked.Title.TextColor3 = Color3.new(1, 1, 1)
+		MoveLook = false
+	else
+		MoveWhenLooked.BackgroundColor3 = Color3.fromRGB(53, 255, 87)
+		MoveWhenLooked.Title.TextColor3 = Color3.new(0.133333, 0.129412, 0.152941)
+		MoveLook = true
 	end
 end)
 
@@ -1248,9 +1339,21 @@ ThirdPerson.MouseButton1Click:Connect(function()
 	end
 end)
 
+SetNetworkOwner.MouseButton1Click:Connect(function()
+	for _, NPC in ipairs(MainFolderSelected:GetChildren()) do
+		if NPC:IsA("Model") and NPC:FindFirstChild("HumanoidRootPart") and CurrentTarget and CurrentTarget.Torso then
+
+			game.ReplicatedStorage.GrabEvents.SetNetworkOwner:FireServer(NPC.HumanoidRootPart, NPC.HumanoidRootPart.CFrame)
+			game.ReplicatedStorage.GrabEvents.DestroyGrabLine:FireServer(NPC.HumanoidRootPart)
+		end
+	end
+end)
+
+
 Jump.MouseButton1Click:Connect(function()
 	for _, NPC in ipairs(MainFolderSelected:GetChildren()) do
 		if NPC:IsA("Model") and NPC:FindFirstChild("HumanoidRootPart") and CurrentTarget and CurrentTarget.Torso then
+
 			local rootPart = NPC:WaitForChild("HumanoidRootPart")
 
 			local force = Instance.new("VectorForce")
@@ -1258,6 +1361,7 @@ Jump.MouseButton1Click:Connect(function()
 			force.Force = Vector3.new(0, tonumber(JumpPower.Input.Text)*100, 0) 
 			force.RelativeTo = Enum.ActuatorRelativeTo.World
 			force.Parent = rootPart
+
 		end
 	end
 	wait(0.2)
@@ -1273,6 +1377,7 @@ end)
 Teleport.MouseButton1Click:Connect(function()
 	for _, NPC in ipairs(MainFolderSelected:GetChildren()) do
 		if NPC:IsA("Model") and NPC:FindFirstChild("HumanoidRootPart") and CurrentTarget and CurrentTarget.Torso then
+			NPC.HumanoidRootPart.AssemblyLinearVelocity = Vector3.new(0,0,0)
 			NPC.HumanoidRootPart.CFrame = CFrame.new(CurrentTarget.Torso.CFrame.X,CurrentTarget.Torso.CFrame.Y,CurrentTarget.Torso.CFrame.Z)
 		end
 	end
@@ -1314,10 +1419,16 @@ local Loop = game:GetService("RunService").Stepped:Connect(function()
 			end
 		end
 	end
+	game:GetService("UserInputService").MouseEnabled = true
+	game:GetService("UserInputService").MouseIconEnabled = false
+	game:GetService("UserInputService").MouseBehavior = Enum.MouseBehavior.Default
 end)
 
-
-
+plr:GetMouse().KeyDown:Connect(function(Key)
+	if Key == "m" then
+		NPCPanel.Enabled = not NPCPanel.Enabled
+	end
+end)
 
 NPCPanel.Destroying:Connect(function()
 	WalkToPoint = false
